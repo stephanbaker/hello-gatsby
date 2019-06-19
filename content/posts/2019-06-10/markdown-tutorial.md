@@ -1,5 +1,5 @@
 ---
-path: "/blog/markdown-tutorial"
+path: "/posts/2019-06-10/markdown-tutorial"
 date: "2019-06-10"
 title: "Markdown Tutorial"
 tags: ["this", "that"]

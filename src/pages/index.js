@@ -15,7 +15,10 @@ const IndexPage = () => (
     </div>
 
     <h2>What about content like blog posts?</h2>
-    <p>Rather than tell you, why don't I just show you by taking you to <Link to="/blog/">the blog</Link></p>
+    <p>Rather than tell you, why don't I just show you by taking you to <Link to="/posts/">the blog</Link></p>
+
+    <h2>What about documentation?</h2>
+    <p>We have that covered as well, so go ahead and <Link to="/docs/">check out the docs</Link></p>
   </Layout>
 )
 

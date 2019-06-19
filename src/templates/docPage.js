@@ -23,10 +23,12 @@ const renderComponent = new rehypeReact({
   },
 }).Compiler
 
-const BlogPostTemplate = ({ data, pageContext }) => {
+const DocPageTemplate = ({ data, pageContext }) => {
+  console.log(data)
   const { markdownRemark } = data
   const { frontmatter, htmlAst } = markdownRemark
   const { previous, next } = pageContext
+
   return (
     <Layout>
       <h1>{frontmatter.title}</h1>
@@ -58,4 +60,4 @@ const BlogPostTemplate = ({ data, pageContext }) => {
   )
 }
 
-export default BlogPostTemplate
+export default DocPageTemplate

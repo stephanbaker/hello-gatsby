@@ -4,8 +4,9 @@ import Layout from "../components/Layout"
 import BlogIndex from "../components/BlogIndex"
 
 export const query = graphql`
-  query HomepageQuery {
+  query PostsQuery {
     allMarkdownRemark(
+      filter: {fileAbsolutePath: {regex: "/.*\\/content\\/posts/"}}
       sort: {order: DESC, fields: [frontmatter___date]}
     ) {
       edges {
@@ -21,7 +22,7 @@ export const query = graphql`
   }
 `
 
-const BlogPage  = ({data}) => (
+const BlogPage = ({ data }) => (
   <Layout>
     <h1>The Blog</h1>
     <p>Check out what I've been talking about</p>

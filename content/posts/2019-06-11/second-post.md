@@ -1,5 +1,5 @@
 ---
-path: "/blog/second-post"
+path: "/posts/2019-06-11/second-post"
 date: "2019-06-11"
 title: "Second Post"
 tags: ["this", "that"]
