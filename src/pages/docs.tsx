@@ -35,7 +35,7 @@ interface Node {
   }
 }
 interface Section {
-  title: String
+  title: string
   nodes: Node[]
 }
 

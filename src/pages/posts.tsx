@@ -22,16 +22,14 @@ export const query = graphql`
   }
 `
 
-interface Node {
-  frontmatter: {
-    title: string,
-    path: string,
-    date: string
-  }
-}
-
 interface Edge {
-  node: Node[]
+  node: {
+    frontmatter: {
+      title: string,
+      path: string,
+      date: string
+    }
+  }
 }
 
 interface BlogPageProps {
