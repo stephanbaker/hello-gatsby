@@ -3,6 +3,11 @@ module.exports = {
     title: `Hello Gatsby`,
     description: `Website built to explore developing with Gatsby.`,
     author: `Stephan Baker`,
+    sectionsOverride: [
+      "Getting Started",
+      "Writing Blog Posts",
+      "Next Steps",
+    ]
   },
   plugins: [
     `gatsby-plugin-react-helmet`,

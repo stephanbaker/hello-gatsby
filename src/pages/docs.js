@@ -6,6 +6,11 @@ import Menu from "../components/Menu"
 
 export const query = graphql`
   query DocsMenuQuery {
+    site {
+      siteMetadata {
+        sectionsOverride
+      }
+    }
     allMarkdownRemark(sort: {order: ASC, fields: [frontmatter___weight, frontmatter___title]}, filter: {fileAbsolutePath: {regex: "/.*/content/docs/"}}) {
       sections: group(field: frontmatter___section) {
         title: fieldValue
@@ -23,8 +28,10 @@ export const query = graphql`
 `
 
 const DocsPage = ({ data }) => {
-  const { allMarkdownRemark } = data;
+  const { site, allMarkdownRemark } = data;
   const { sections } = allMarkdownRemark;
+  const { siteMetadata } = site;
+  const { sectionsOverride } = siteMetadata;
 
   return (
     <Layout>
@@ -33,7 +40,7 @@ const DocsPage = ({ data }) => {
       <p>
         Not interested? <Link to="/">Go back to the homepage</Link>
       </p>
-      <Menu sections={sections} />
+      <Menu sections={sections} sectionsOverride={sectionsOverride} />
     </Layout>
   )
 }

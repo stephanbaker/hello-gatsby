@@ -24,7 +24,6 @@ const renderComponent = new rehypeReact({
 }).Compiler
 
 const DocPageTemplate = ({ data, pageContext }) => {
-  console.log(data)
   const { markdownRemark } = data
   const { frontmatter, htmlAst } = markdownRemark
   const { previous, next } = pageContext
